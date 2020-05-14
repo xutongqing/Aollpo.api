@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Aollpo.api</name>
+    </assembly>
+    <members>
+        <member name="M:Aollpo.api.Controllers.WeatherForecastController.Get">
+            <summary>
+            获取所有数据
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

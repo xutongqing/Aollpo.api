@@ -23,6 +23,10 @@ namespace Aollpo.api.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// 获取所有数据
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {

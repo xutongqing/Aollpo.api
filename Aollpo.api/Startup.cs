@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -10,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.PlatformAbstractions;
 
 namespace Aollpo.api
 {
@@ -36,6 +38,11 @@ namespace Aollpo.api
                     Version = "v1.1.0",
                     Title = "Aollpo api"
                 });
+
+                //»ñÈ¡api×¢ÊÍ
+                var basePath = PlatformServices.Default.Application.ApplicationBasePath;
+                var path = Path.Combine(basePath, "Aollpo.api.xml");
+                p.IncludeXmlComments(path);
             });
         }
 
