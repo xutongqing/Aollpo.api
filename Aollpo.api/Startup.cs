@@ -26,6 +26,17 @@ namespace Aollpo.api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddMvc();
+
+            services.AddSwaggerGen(p =>
+            {
+                p.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Version = "v1.1.0",
+                    Title = "Aollpo api"
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +52,13 @@ namespace Aollpo.api
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(p =>
+            {
+                p.SwaggerEndpoint("/swagger/v1/swagger.json", "ApiHelp V1");
+            });
 
             app.UseEndpoints(endpoints =>
             {
