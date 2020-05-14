@@ -8,7 +8,6 @@ obj
 Thumbs.db
 .DS_Store
 
-launchSettings.json
 *_wpftmp.csproj
 
 *.suo
