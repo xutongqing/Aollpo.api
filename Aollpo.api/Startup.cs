@@ -41,12 +41,13 @@ namespace Aollpo.api
                 });
 
                 //获取api注释
-                var basePath = PlatformServices.Default.Application.ApplicationBasePath;
+                var basePath = AppDomain.CurrentDomain.BaseDirectory;
                 var path = Path.Combine(basePath, "Aollpo.api.xml");
                 p.IncludeXmlComments(path);
 
                 //添加对控制器的描述
-                p.DocumentFilter<SwaggerTag>();
+                //p.DocumentFilter<SwaggerTag>();
+                p.IncludeXmlComments(path, true);
             });
         }
 
