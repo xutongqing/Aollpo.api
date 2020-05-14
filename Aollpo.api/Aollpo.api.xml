@@ -4,11 +4,28 @@
         <name>Aollpo.api</name>
     </assembly>
     <members>
+        <member name="T:Aollpo.api.Controllers.WeatherForecastController">
+            <summary>
+            测试
+            </summary>
+        </member>
         <member name="M:Aollpo.api.Controllers.WeatherForecastController.Get">
             <summary>
             获取所有数据
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:Aollpo.api.SwaggerHelp.SwaggerTag">
+            <summary>
+            Swagger 帮助类
+            </summary>
+        </member>
+        <member name="M:Aollpo.api.SwaggerHelp.SwaggerTag.Apply(Microsoft.OpenApi.Models.OpenApiDocument,Swashbuckle.AspNetCore.SwaggerGen.DocumentFilterContext)">
+            <summary>
+            帮助方法
+            </summary>
+            <param name="swaggerDoc"></param>
+            <param name="context"></param>
         </member>
     </members>
 </doc>

@@ -7,6 +7,9 @@ using Microsoft.Extensions.Logging;
 
 namespace Aollpo.api.Controllers
 {
+    /// <summary>
+    /// 测试
+    /// </summary>
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase

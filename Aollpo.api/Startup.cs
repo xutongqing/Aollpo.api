@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Aollpo.api.SwaggerHelp;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -43,6 +44,9 @@ namespace Aollpo.api
                 var basePath = PlatformServices.Default.Application.ApplicationBasePath;
                 var path = Path.Combine(basePath, "Aollpo.api.xml");
                 p.IncludeXmlComments(path);
+
+                //添加对控制器的描述
+                p.DocumentFilter<SwaggerTag>();
             });
         }
 
