@@ -43,7 +43,7 @@ namespace Aollpo.api
                 //获取api注释
                 var basePath = AppDomain.CurrentDomain.BaseDirectory;
                 var path = Path.Combine(basePath, "Aollpo.api.xml");
-                p.IncludeXmlComments(path);
+                //p.IncludeXmlComments(path);
 
                 //添加对控制器的描述
                 //p.DocumentFilter<SwaggerTag>();
